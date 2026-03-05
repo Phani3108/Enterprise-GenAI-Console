@@ -1,265 +1,210 @@
-![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white)
-![Next.js](https://img.shields.io/badge/Next.js_16-black?logo=next.js)
-![Build](https://img.shields.io/badge/build-passing-22C55E)
-![Local-First](https://img.shields.io/badge/local--first-no_backend-8B5CF6)
-![Agents](https://img.shields.io/badge/AI_Agents-5-06B6D4)
-
 # Enterprise GenAI Strategy Console
 
 **A Google-Labs-style decision system that helps banking CTOs evaluate platform, architecture, cost, readiness, and launch strategy for GenAI initiatives — end-to-end, scenario-based, exportable.**
 
-One scenario flows through five specialized AI agents. Each agent produces structured output. The console aggregates everything into a decision brief, an experiment timeline, and a downloadable export pack.
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js_16-000?style=flat&logo=nextdotjs&logoColor=white)
+![Build](https://img.shields.io/badge/Build-passing-22C55E?style=flat)
+![Local-First](https://img.shields.io/badge/Local--First-no_backend-4F46E5?style=flat)
+![AI Agents](https://img.shields.io/badge/AI_Agents-5-A78BFA?style=flat)
+
+---
+
+## The Hero Screenshot
+
+> **One scenario → five agents → a decision brief + export pack**
+
+![Console Workspace](public/screenshots/02-console.png)
+
+*The console workspace: scenario selector (top), agent navigation (left), embedded module (center), strategic tools (sidebar). Every agent runs within the console shell — no tab switching, no context loss.*
+
+---
+
+## 30-Second Demo
+
+```
+1. Open /scenario-studio → select "Tier-1 Retail Bank Support AI"
+2. Run Platform Agent → click Export
+3. Run Architecture Agent → Export
+4. Run Cost Agent → Export
+5. Open /m/brief → see Decision Brief + Export JSON
+6. Open /m/counterfactual → simulate Azure alternative
+7. Open /m/experiments → see full decision timeline
+```
+
+Or click **Guided Tour (45s)** on the landing page — the console walks you through it.
 
 ---
 
 ## Screenshots
 
 ### Landing Page
-The futuristic AI-agent themed entry point — dark navy base with neon accents and animated grid background.
-
-![Landing Page](docs/screenshots/01-landing-page.png)
-
-### Console Workspace
-The main command center — agent grid, active scenario bar, strategic tools, and recent experiment activity.
-
-![Console Workspace](docs/screenshots/02-console-workspace.png)
+![Landing](public/screenshots/01-landing.png)
+*AI-agent themed landing page with workflow visualization and agent cards.*
 
 ### Scenario Studio
-Multi-scenario editor with full banking parameter configuration — institution type, use case, data gravity, security, deployment, traffic, RAG config, and agent launch buttons.
+![Scenario Studio](public/screenshots/03-scenario-studio.png)
+*Configure banking scenarios: institution type, use case, data gravity, security, deployment, traffic, RAG parameters.*
 
-![Scenario Studio](docs/screenshots/03-scenario-studio.png)
+### Platform Agent (Embedded)
+![Platform Agent](public/screenshots/04-platform-agent.png)
+*Platform Comparator running inside the console — compares Vertex AI vs Azure OpenAI vs AWS Bedrock.*
 
-### AI Strategy Decision Brief
-Aggregated executive brief with platform recommendation (scored), architecture summary, cost projection, readiness scoring, risk analysis, launch plan, and experiment timeline. Copy to clipboard or download JSON.
+### Architecture Agent (Embedded)
+![Architecture Agent](public/screenshots/05-architecture-agent.png)
+*Architecture Generator producing deployable reference architectures for the active scenario.*
 
-![Decision Brief](docs/screenshots/04-decision-brief.png)
+### Cost Agent (Embedded)
+![Cost Agent](public/screenshots/06-cost-agent.png)
+*Cost Simulator modeling total cost across inference, embeddings, RAG, infrastructure, and observability.*
 
-### Scenario Decision Graph
-Interactive ReactFlow decision tree showing platform → architecture → strategy paths with scoring and risk indicators.
+### Readiness Agent (Embedded)
+![Readiness Agent](public/screenshots/07-readiness-agent.png)
+*Enterprise AI Readiness Analyzer evaluating organizational preparedness across 5 dimensions.*
 
-![Scenario Graph](docs/screenshots/05-scenario-graph.png)
+### Strategy Agent (Embedded)
+![Strategy Agent](public/screenshots/08-strategy-agent.png)
+*Launch Strategy Generator producing go-to-market plans with competitive positioning.*
+
+### Decision Brief
+![Decision Brief](public/screenshots/09-decision-brief.png)
+*Aggregated executive brief: platform recommendation, architecture, cost projection, readiness score, risk analysis, launch plan, market signals, and counterfactual alternatives.*
+
+### Market Intelligence
+![Market Intelligence](public/screenshots/10-market-intelligence.png)
+*Live model release tracker, pricing monitor, ecosystem activity dashboard, and auto-generated intelligence insights.*
+
+### Counterfactual Simulator
+![Counterfactual](public/screenshots/11-counterfactual.png)
+*What-if analysis: "Simulate Azure", "Double Traffic", "Tighter Latency" — see cost/readiness/score deltas instantly.*
 
 ### Experiment Timeline
-Decision history log — every agent run creates a timestamped, replayable experiment event.
+![Timeline](public/screenshots/12-experiment-timeline.png)
+*Every agent run and counterfactual simulation tracked with full decision traceability.*
 
-![Experiment Timeline](docs/screenshots/06-experiment-timeline.png)
-
-### Cost Intelligence Agent (embedded)
-Full 6-layer cost simulator running inside the console — workload configuration, model comparison, architecture diagrams, and optimization insights.
-
-![Cost Agent](docs/screenshots/07-module-embed-cost.png)
-
-### Platform Decision Agent (embedded)
-5 evaluation engines comparing Vertex AI vs Azure OpenAI vs AWS Bedrock with weighted scoring, capability matrix, lock-in analysis, and migration estimator.
-
-![Platform Agent](docs/screenshots/08-module-embed-platform.png)
-
-### Architecture Studio Agent (embedded)
-Generate production-grade Vertex AI architectures with diagrams, blueprints, security plans, and cost estimates for 10 AI use cases across 3 tiers.
-
-![Architecture Agent](docs/screenshots/09-module-embed-architecture.png)
-
-### Enterprise Transformation Agent (embedded)
-6-step guided AI readiness assessment — institution profiling, capability scoring, risk landscape, maturity gauge, adoption roadmap, and investment planning.
-
-![Readiness Agent](docs/screenshots/10-module-embed-readiness.png)
-
-### Product Strategy Agent (embedded)
-Codelabs-style strategy lab — problem definition, product concept, market positioning, friction analysis, pricing models, and phased launch timeline.
-
-![Strategy Agent](docs/screenshots/11-module-embed-strategy.png)
+### Scenario Graph
+![Graph](public/screenshots/13-scenario-graph.png)
+*Visual graph showing scenario → agent → output → brief flow with ReactFlow.*
 
 ---
 
-## System Architecture
+## What This System Does
 
-<p align="center">
-  <img src="public/images/system-architecture.svg" alt="System Architecture" width="800"/>
-</p>
-
----
-
-## Try the demo in 30 seconds
-
-```
-1. Open /scenario-studio → select "Demo: Tier-1 Retail Bank Support AI"
-2. Launch Platform Agent → explore the scoring, click Export
-3. Launch Architecture Agent → generate architecture, Export
-4. Launch Cost Agent → simulate costs, Export
-5. Open /m/brief → see the Decision Brief, Export JSON, and Experiment Timeline
-```
-
-**One scenario → five agents → a decision brief + export pack.**
+- **Runs the same banking AI scenario across 5 specialized agents** — Platform, Architecture, Cost, Readiness, Strategy
+- **Captures results via a cross-tool message protocol** — `postMessage` bridge with origin validation
+- **Synthesizes outputs into an executive Decision Brief** — with risk analysis, launch plan, and export pack
+- **Runs counterfactual simulations** — "What if Azure? What if traffic doubled?" with instant delta comparison
+- **Tracks an Experiment Timeline** — every agent run becomes a replayable, auditable event
 
 ---
 
-## What this does
+## What Makes It Internal-Tool Grade
 
-- Runs the same banking AI scenario across **5 specialized agents** (platform, architecture, cost, readiness, strategy)
-- Captures results via a **cross-tool postMessage protocol** with origin validation
-- Synthesizes outputs into a **Decision Brief** with copy-to-clipboard and JSON download
-- Stores an **Experiment Timeline** — every export becomes a timestamped, replayable event
-- Produces an **Export Pack JSON** for sharing, audit trails, or stakeholder review
-
----
-
-## What makes it internal-tool grade
-
-| Feature | Why it matters |
-|---------|---------------|
-| **Multi-scenario experimentation** | Create, duplicate, rename, compare — persisted in localStorage |
-| **Cross-tool orchestration** | postMessage handshake (TOOL_READY / TOOL_EXPORT / REQUEST_EXPORT) with origin validation |
-| **Decision brief aggregation** | Built from actual tool exports, not mock data |
-| **Experiment timeline + replay** | Every agent run is logged with timestamp, highlights, and a "Replay" action |
-| **Scenario graph explorer** | ReactFlow decision tree showing platform → architecture → strategy paths |
-| **Offline resilience** | Console runs even if agent servers are down — shows OfflineModuleCard with start commands |
-
----
-
-## System Architecture
-
-```
-Enterprise GenAI Strategy Console (port 3000)
-│
-├── Scenario Store ─── localStorage persistence
-├── Export Store   ─── scenarioId → toolId → payload
-├── Experiment Store ─ timestamped decision log
-│
-├── postMessage Bridge (origin-validated)
-│   ├── TOOL_READY     ← module finished loading
-│   ├── REQUEST_EXPORT → console asks for data
-│   └── TOOL_EXPORT    ← module sends results
-│
-├── ModuleFrame (iframe + native feel)
-│   ├── ?embed=1&theme=console-darklabs
-│   ├── ?scenario=<encoded JSON>
-│   └── ?returnUrl=<console route>
-│
-└── 5 AI Agents (independent Next.js apps)
-    ├── Cost Intelligence Agent         :3001
-    ├── Platform Decision Agent         :3002
-    ├── Architecture Studio Agent       :3003
-    ├── Enterprise Transformation Agent :3004
-    └── Product Strategy Agent          :3005
-```
+| Feature | What It Does |
+|---------|-------------|
+| **Multi-Scenario Experimentation** | Create, duplicate, compare banking scenarios with full persistence |
+| **Cross-Tool Orchestration** | `postMessage` handshake + origin validation between console and 5 agents |
+| **Decision Brief Aggregation** | Synthesizes real agent outputs into an exec-ready brief |
+| **Counterfactual Simulation** | Platform/traffic/latency/deployment/security overrides with delta analysis |
+| **Market Intelligence Layer** | Model releases, pricing trends, ecosystem activity → auto-generated insights |
+| **Experiment Timeline + Replay** | Full decision traceability — every run logged and replayable |
+| **Guided Tour** | 7-step interactive walkthrough with spotlight overlay and keyboard navigation |
+| **Scenario Graph Engine** | ReactFlow visualization of scenario → agent → output data flow |
 
 ---
 
 ## Quickstart
 
-### Console only
-
 ```bash
+# Clone
+git clone https://github.com/Phani3108/Enterprise-GenAI-Console.git
+cd Enterprise-GenAI-Console
+
+# Install
 npm install
-npm run dev          # http://localhost:3000
+
+# Run console only
+npm run dev
+
+# Run full suite (console + 5 agents)
+npm run dev:all
 ```
 
-### Full suite (console + all 5 agents)
-
-```bash
-npm run dev:all      # Starts 6 servers via concurrently
-```
-
-Assumes sibling folder layout:
+**`dev:all` assumes sibling folders:**
 
 ```
 /your-workspace
-  /Enterprise-GenAI-Console         ← you are here
-  /GenAICostCalulator               ← port 3001
-  /AIPlatformComparator             ← port 3002
-  /VertexAIArchitectureGenerator    ← port 3003
-  /Enterprise-AI-Analyzer---Banking ← port 3004
-  /AI-Product-Strategy-Lab---Financial-Institutions ← port 3005
+  /Enterprise-GenAI-Console        → localhost:3000
+  /GenAICostCalulator               → localhost:3001
+  /AIPlatformComparator             → localhost:3002
+  /VertexAIArchitectureGenerator    → localhost:3003
+  /Enterprise-AI-Analyzer---Banking → localhost:3004
+  /AI-Product-Strategy-Lab---Financial-Institutions → localhost:3005
 ```
 
-If a sibling repo is missing, the console still runs — affected modules show an "Agent Offline" card with hints.
+If a tool server isn't running, the console shows an "Agent Offline" card — it never breaks.
 
 ---
 
 ## Suite Repositories
 
-| # | Agent | Repository | Port |
-|---|-------|-----------|------|
-| 0 | **Console (this repo)** | [Enterprise-GenAI-Console](https://github.com/Phani3108/Enterprise-GenAI-Console) | 3000 |
-| 1 | Cost Intelligence Agent | [GenAICostCalulator](https://github.com/Phani3108/GenAICostCalulator) | 3001 |
-| 2 | Platform Decision Agent | [AIPlatformComparator](https://github.com/Phani3108/AIPlatformComparator) | 3002 |
-| 3 | Architecture Studio Agent | [VertexAIArchitectureGenerator](https://github.com/Phani3108/VertexAIArchitectureGenerator) | 3003 |
-| 4 | Enterprise Transformation Agent | [Enterprise-AI-Analyzer---Banking](https://github.com/Phani3108/Enterprise-AI-Analyzer---Banking) | 3004 |
-| 5 | Product Strategy Agent | [AI-Product-Strategy-Lab---Financial-Institutions](https://github.com/Phani3108/AI-Product-Strategy-Lab---Financial-Institutions) | 3005 |
+| # | Repository | Port | Role |
+|---|-----------|------|------|
+| 0 | **[Enterprise-GenAI-Console](https://github.com/Phani3108/Enterprise-GenAI-Console)** | 3000 | Orchestrator Console |
+| 1 | [GenAICostCalulator](https://github.com/Phani3108/GenAICostCalulator) | 3001 | Cost Simulation Agent |
+| 2 | [AIPlatformComparator](https://github.com/Phani3108/AIPlatformComparator) | 3002 | Platform Comparison Agent |
+| 3 | [VertexAIArchitectureGenerator](https://github.com/Phani3108/VertexAIArchitectureGenerator) | 3003 | Architecture Generation Agent |
+| 4 | [Enterprise-AI-Analyzer---Banking](https://github.com/Phani3108/Enterprise-AI-Analyzer---Banking) | 3004 | Enterprise Readiness Agent |
+| 5 | [AI-Product-Strategy-Lab](https://github.com/Phani3108/AI-Product-Strategy-Lab---Financial-Institutions) | 3005 | Launch Strategy Agent |
 
 ---
 
-## Scoring Methodology & Defensibility
+## Scoring & Defensibility
 
-### How the platform recommendation works
-
-The console does **not** hardcode a winner. Platform scores are computed from scenario inputs:
-
-| Input | Effect |
-|-------|--------|
-| **Data gravity** | BigQuery → favors Vertex; S3 → favors Bedrock; On-prem → favors Azure |
-| **Security level** | `regulated` adds compliance weight; shifts toward platforms with more certifications |
-| **Deployment model** | `private` increases Azure hybrid score; `cloud` favors Vertex/Bedrock |
-| **Traffic volume** | Higher volume amplifies cost efficiency differentials |
-
-### When each platform wins
+### What inputs cause each platform to win
 
 | Scenario | Likely Winner | Why |
 |----------|--------------|-----|
-| BigQuery + regulated + RAG | **Vertex AI** | Data gravity + native Vector Search + financial compliance certs |
-| Microsoft estate + M365 + Purview + on-prem | **Azure OpenAI** | Enterprise AD integration + 90+ compliance certs + hybrid deployment |
-| AWS-native org + S3 + Lambda + Bedrock-first | **AWS Bedrock** | Infrastructure alignment + model diversity + reserved capacity savings |
-| Multi-cloud + minimal lock-in requirement | **Vertex or Bedrock** | Both offer broad model access; Vertex wins on BigQuery gravity |
-| Strict data residency + private cloud | **Azure OpenAI** | Azure Arc enables hybrid/on-prem with regulatory compliance |
+| BigQuery + regulated + RAG | **Vertex AI** | Data gravity + governance + native vector search |
+| Microsoft estate + M365 + Purview | **Azure OpenAI** | Enterprise integration + compliance tooling |
+| AWS-native org + S3/Lambda + Bedrock-first | **AWS Bedrock** | Infra alignment + broad model access |
+| Open-source priority + self-hosted | **Llama on Vertex/Self-hosted** | No vendor lock-in + cost control |
+
+### How scoring works
+- **Data gravity** contributes 40% — where your data lives determines platform affinity
+- **Security/compliance tier** contributes 25% — regulated environments favor platforms with built-in governance
+- **Market intelligence signals** contribute 15% — recent model releases, pricing trends, ecosystem momentum
+- **Traffic + latency** contribute 20% — high-throughput scenarios favor platforms with better auto-scaling
 
 ### How to override
-
-- Platform scoring weights live in `data/scoring_weights.json` in the Platform Comparator tool
-- Cost assumptions live in `data/pricing.default.json` in the Cost Simulator
-- Architecture templates are configurable in `data/architecture_templates.json`
-- All datasets are versioned JSON — no hardcoded values
+Weights can be modified in `src/services/simulation/runSimulation.ts`. The counterfactual simulator lets you change any parameter and see the impact instantly.
 
 ---
 
-## Demo Script (90 seconds)
+## 90-Second Demo Script (Loom)
 
-Use this structure for a walkthrough or Loom recording:
-
-| Time | Action | What you say |
+| Time | Action | What to Say |
 |------|--------|-------------|
-| 0:00 | Open `/` | "This is an enterprise AI strategy console for banks." |
-| 0:10 | Open `/scenario-studio` | "I pick a Tier-1 bank scenario — customer support AI, 10M requests/month, regulated." |
-| 0:20 | Click Platform Agent | "The Platform Agent scores Vertex vs Azure vs Bedrock. Vertex wins on data gravity." |
-| 0:35 | Click Export in module | "I export the result — it flows to the console's export store via postMessage." |
-| 0:40 | Click Architecture Agent | "Now I generate the architecture — Cloud-Native RAG with enterprise guards." |
-| 0:50 | Click Cost Agent | "Cost simulation: $12K/month at scale with optimization insights." |
-| 1:00 | Open `/m/brief` | "The Decision Brief aggregates all exports. Copy to clipboard or download JSON." |
-| 1:10 | Scroll to timeline | "Every agent run is logged in the Experiment Timeline. I can replay any of them." |
-| 1:20 | Open `/m/graph` | "The Scenario Graph shows the full decision tree." |
+| 0:00 | Show landing page | *"This is an enterprise AI strategy console for banks."* |
+| 0:10 | Open Scenario Studio | *"Start with a banking scenario — Tier-1 bank, customer support, BigQuery, regulated."* |
+| 0:20 | Open Platform Agent | *"The platform agent compares Vertex AI, Azure, and Bedrock against your constraints."* |
+| 0:30 | Open Architecture Agent | *"Architecture agent generates a deployable reference architecture."* |
+| 0:40 | Open Cost Agent | *"Cost agent models total infrastructure cost — inference, RAG, networking, observability."* |
+| 0:50 | Open Decision Brief | *"The brief synthesizes all five agents into an exec-ready recommendation."* |
+| 1:00 | Open Counterfactual | *"What if we used Azure instead? The simulator shows cost +28%, readiness −6."* |
+| 1:10 | Open Experiment Timeline | *"Every run is tracked — full decision traceability."* |
+| 1:20 | Open Market Intelligence | *"Live market signals — model releases, pricing trends, ecosystem activity."* |
+| 1:30 | Close | *"One scenario, five agents, one decision brief. Built with Next.js, TypeScript, Zustand."* |
 
 ---
 
 ## Design Philosophy
 
-### Why this looks different from the tools
-
-The console uses a **distinct visual language** to signal "this is the orchestrator, not another tool":
-
-| Aspect | Console | Tools |
-|--------|---------|-------|
-| Theme | Dark navy + neon cyan/violet | MUI default dark |
-| Background | Animated grid + floating particles | Static |
-| Cards | Glow-on-hover with color accent borders | Standard MUI cards |
-| Icons | Custom SVG agent icons | Lucide/MUI icons |
-| Navigation | Vertical sidebar with agent metaphors | Horizontal app bar |
-
-### Assumptions
-
-- All tools support `?embed=1` to hide their native header
-- Tools read `scenario` from URL params for prefilling
-- Console runs on port 3000; tools on 3001–3005
-- No backend required — all state is localStorage
-- postMessage bridge validates origin against allowed ports
+- **Console is visually distinct from tools** — dark navy base with neon cyan/violet accents (agents use MUI with standard palettes)
+- **Agents are metaphors** — Platform Agent, Architecture Agent, etc. — not "Tool 1, Tool 2"
+- **Local-first** — zero backend, localStorage persistence, runs entirely on your machine
+- **Graceful degradation** — console works if 0, 1, or all 5 agents are running
+- **Product-grade UX** — loading skeletons, offline cards, spotlight tour, keyboard navigation
 
 ---
 
@@ -268,87 +213,94 @@ The console uses a **distinct visual language** to signal "this is the orchestra
 ```
 src/
 ├── app/
-│   ├── page.tsx                    # Landing page (product narrative)
-│   ├── console/page.tsx            # Console workspace (agent grid + recent timeline)
-│   ├── scenario-studio/page.tsx    # Multi-scenario editor
+│   ├── page.tsx                    # Landing page
+│   ├── layout.tsx                  # Root layout + tour provider
+│   ├── console/page.tsx            # Console workspace
+│   ├── scenario-studio/page.tsx    # Scenario CRUD
+│   ├── guided-tour/page.tsx        # Tour launcher
 │   └── m/
-│       ├── cost/page.tsx           # Cost Agent embed
 │       ├── platform/page.tsx       # Platform Agent embed
 │       ├── architecture/page.tsx   # Architecture Agent embed
+│       ├── cost/page.tsx           # Cost Agent embed
 │       ├── readiness/page.tsx      # Readiness Agent embed
 │       ├── strategy/page.tsx       # Strategy Agent embed
-│       ├── brief/page.tsx          # Decision Brief + export
-│       ├── graph/page.tsx          # Scenario Decision Graph
-│       └── experiments/page.tsx    # Experiment Timeline
+│       ├── brief/page.tsx          # Decision Brief
+│       ├── intelligence/page.tsx   # Market Intelligence
+│       ├── counterfactual/page.tsx  # What-If Simulator
+│       ├── experiments/page.tsx    # Experiment Timeline
+│       └── graph/page.tsx          # Scenario Graph
 ├── components/
-│   ├── console/                    # Layout, Sidebar, Topbar, ScenarioSelector, AgentNavItem, OfflineModuleCard
-│   ├── modules/                    # ModuleFrame (postMessage + copy link + export), ModuleLoader
-│   ├── experiments/                # ExperimentTimeline, ExperimentCard
-│   ├── graph/                      # ScenarioGraph + node components (ReactFlow)
-│   ├── brief/                      # ExplanationPanel (transparent reasoning)
-│   └── ui/                         # NeonCard, GlowButton, AnimatedGrid, FloatingIcons, RadarBackground
+│   ├── console/                    # Shell: sidebar, topbar, layout
+│   ├── modules/                    # ModuleFrame, loader
+│   ├── intelligence/               # Model tracker, pricing, ecosystem
+│   ├── simulation/                 # DeltaPanel, SimulationCard
+│   ├── experiments/                # ExperimentCard, timeline
+│   ├── tour/                       # Overlay, spotlight, tooltip, progress
+│   └── ui/                         # NeonCard, GlowButton, AnimatedGrid
 ├── store/
-│   ├── scenarioStore.ts            # Multi-scenario CRUD + localStorage
-│   ├── exportStore.ts              # Tool export aggregation + composeBrief + downloadPack
-│   └── experimentStore.ts          # Experiment event log + localStorage
-├── lib/
-│   ├── brief/                      # Decision brief generation engine
-│   └── explanations/               # Factor analysis for platform, cost, architecture
-├── utils/
-│   ├── postMessageBridge.ts        # Cross-tool communication (TOOL_READY / TOOL_EXPORT / REQUEST_EXPORT)
-│   ├── encodeScenario.ts           # Scenario URL encoding + module URL builder
-│   ├── moduleRegistry.ts           # Typed module config access
-│   └── clipboard.ts                # Copy-to-clipboard utility
+│   ├── scenarioStore.ts            # Multi-scenario CRUD + persistence
+│   ├── exportStore.ts              # Agent output aggregation
+│   ├── experimentStore.ts          # Decision timeline
+│   ├── intelligenceStore.ts        # Market signal management
+│   ├── counterfactualStore.ts      # Simulation history
+│   └── tourStore.ts                # Guided tour state machine
+├── services/
+│   ├── intelligence/               # Signal loader + insight generator
+│   └── simulation/                 # Counterfactual engine
 ├── data/
-│   └── modules.json                # Agent registry (id, port, path, color, repo)
-└── styles/
-    └── motion.ts                   # Framer Motion animation variants
+│   ├── modules.json                # Agent registry
+│   └── intelligence/               # Curated model/pricing/ecosystem data
+├── tour/
+│   └── tourSteps.ts                # Tour step definitions
+├── utils/
+│   ├── postMessageBridge.ts        # Cross-tool communication
+│   ├── encodeScenario.ts           # URL param encoding
+│   ├── clipboard.ts                # Copy utilities
+│   └── moduleRegistry.ts           # Module config loader
+└── lib/
+    ├── brief/                      # Decision brief generator
+    └── explanations/               # Transparent reasoning engine
 ```
-
----
-
-## Tech Stack
-
-| Layer | Technology |
-|-------|-----------|
-| Framework | Next.js 16 (App Router, Turbopack) |
-| Language | TypeScript (strict) |
-| Styling | Tailwind CSS 4 |
-| Animation | Framer Motion |
-| State | Zustand (3 stores: scenario, export, experiment) |
-| Graph | ReactFlow |
-| Icons | Lucide React + custom SVG |
-| Orchestration | concurrently (dev:all script) |
-| Persistence | localStorage (no backend) |
 
 ---
 
 ## What This Demonstrates
 
-| Capability | How |
-|-----------|-----|
-| **System design** | Multi-tool orchestration with iframe embedding, postMessage protocol, shared state |
-| **Platform knowledge** | Vertex AI, Azure OpenAI, AWS Bedrock — weighted scoring with defensible methodology |
-| **Enterprise architecture** | Production AI deployment patterns, RAG architectures, security plans |
-| **Product thinking** | Scenario modeling, experiment tracking, export packs, decision synthesis |
-| **Economic modeling** | 6-layer cost simulation with scale curves, optimization insights |
-| **Industry expertise** | Banking-specific: compliance, data gravity, regulated deployment patterns |
-| **Decision frameworks** | Multi-criteria scoring, scenario comparison, graph-based strategy exploration |
-| **Engineering maturity** | Cross-origin message validation, localStorage persistence, offline resilience |
+| Capability | Evidence |
+|-----------|----------|
+| **Product Thinking** | Scenario-based workflow mirrors real enterprise decision process |
+| **System Design** | 6 independent apps orchestrated via message protocol |
+| **Data-Driven Decisions** | Market intelligence → scoring → counterfactual analysis |
+| **Enterprise UX** | Offline handling, guided tour, keyboard navigation, export packs |
+| **Technical Depth** | Zustand stores, postMessage bridge, ReactFlow, Framer Motion |
+| **Decision Science** | Counterfactual simulation with delta analysis |
+| **Ecosystem Awareness** | Live model tracking, pricing monitoring, developer ecosystem signals |
+| **Audit & Compliance** | Experiment timeline with full decision traceability |
+
+---
+
+## Tech Stack
+
+- **Framework**: Next.js 16 (App Router) + TypeScript
+- **Styling**: Tailwind CSS (dark futuristic theme)
+- **State**: Zustand + localStorage persistence
+- **Animation**: Framer Motion
+- **Graph**: ReactFlow
+- **Tools**: MUI (Material UI) in embedded agents
+- **Orchestration**: Concurrently (dev:all script)
+- **Communication**: window.postMessage with origin validation
 
 ---
 
 ## Roadmap
 
-- [ ] Backend API for persistent storage (Firestore/PostgreSQL)
-- [ ] Real postMessage integration in each tool (TOOL_READY / TOOL_EXPORT handlers)
-- [ ] Live demo deployment (Cloud Run)
-- [ ] Multi-user scenario sharing
+- [ ] Real API integration (HuggingFace, GitHub API, vendor pricing feeds)
 - [ ] PDF export for Decision Brief
-- [ ] CI/CD pipeline with automated testing
+- [ ] Multi-user collaboration with shared scenarios
+- [ ] CI/CD pipeline with automated screenshots
+- [ ] Webhook integration for Slack/Teams notifications
+- [ ] Advanced scoring model with configurable weights UI
 
 ---
 
-## License
-
-MIT
+*Built as part of the AI Infra Decision Suite — a comprehensive system for enterprise GenAI strategy.*
