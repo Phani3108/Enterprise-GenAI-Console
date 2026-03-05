@@ -88,6 +88,7 @@ export default function ModuleFrame({
           {scenarioId && (
             <button
               onClick={handleRequestExport}
+              data-tour="module-export"
               className="p-1.5 rounded-md hover:bg-white/[0.05] text-[#64748B] hover:text-[#94A3B8] transition-colors"
               title="Export from module"
             >

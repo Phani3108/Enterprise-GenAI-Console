@@ -15,9 +15,10 @@ import { getArchitectureExplanation } from '@/lib/explanations/architectureExpla
 import { copyToClipboard } from '@/utils/clipboard';
 import { fadeInUp, staggerContainer } from '@/styles/motion';
 import { useIntelligenceStore } from '@/store/intelligenceStore';
+import { useCounterfactualStore } from '@/store/counterfactualStore';
 import {
   FileText, Shield, TrendingUp, AlertTriangle, Rocket, Server,
-  DollarSign, BarChart3, Download, ClipboardCopy, Check, Clock, Radio,
+  DollarSign, BarChart3, Download, ClipboardCopy, Check, Clock, Radio, FlaskConical,
 } from 'lucide-react';
 
 export default function BriefPage() {
@@ -97,6 +98,7 @@ export default function BriefPage() {
             <div className="flex items-center gap-2">
               <button
                 onClick={handleCopyBrief}
+                data-tour="brief-copy"
                 className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-white/[0.05] border border-white/[0.08] text-xs text-[#94A3B8] hover:text-[#F8FAFC] transition-colors"
               >
                 {copied ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <ClipboardCopy className="w-3.5 h-3.5" />}
@@ -104,6 +106,7 @@ export default function BriefPage() {
               </button>
               <button
                 onClick={() => scenario && downloadExportPack(scenario.scenarioId)}
+                data-tour="brief-export"
                 className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-white/[0.05] border border-white/[0.08] text-xs text-[#94A3B8] hover:text-[#F8FAFC] transition-colors"
               >
                 <Download className="w-3.5 h-3.5" />
@@ -266,13 +269,18 @@ export default function BriefPage() {
             </NeonCard>
           </motion.div>
 
-          {/* Market Signals */}
+          {/* Alternative Scenarios Considered */}
           <motion.div variants={fadeInUp} custom={7} className="mt-6">
+            <CounterfactualSummarySection scenarioId={scenario.scenarioId} />
+          </motion.div>
+
+          {/* Market Signals */}
+          <motion.div variants={fadeInUp} custom={8} className="mt-6">
             <MarketSignalsSection />
           </motion.div>
 
           {/* Decision Timeline */}
-          <motion.div variants={fadeInUp} custom={8} className="mt-6">
+          <motion.div variants={fadeInUp} custom={9} className="mt-6">
             <NeonCard color="#F59E0B" hoverable={false}>
               <div className="p-5">
                 <div className="flex items-center gap-2 mb-4">
@@ -286,6 +294,62 @@ export default function BriefPage() {
         </motion.div>
       </div>
     </ConsoleLayout>
+  );
+}
+
+function CounterfactualSummarySection({ scenarioId }: { scenarioId: string }) {
+  const { getScenarioRuns } = useCounterfactualStore();
+  const runs = getScenarioRuns(scenarioId);
+
+  if (runs.length === 0) {
+    return (
+      <NeonCard color="#8B5CF6" hoverable={false}>
+        <div className="p-5">
+          <div className="flex items-center gap-2 mb-2">
+            <FlaskConical className="w-4 h-4 text-[#8B5CF6]" />
+            <h2 className="text-sm font-semibold text-[#F8FAFC]">Alternative Scenarios Considered</h2>
+          </div>
+          <p className="text-[11px] text-[#64748B]">
+            No counterfactual simulations run yet.{' '}
+            <a href="/m/counterfactual" className="text-[#8B5CF6] hover:underline">Run one now</a>
+          </p>
+        </div>
+      </NeonCard>
+    );
+  }
+
+  return (
+    <NeonCard color="#8B5CF6" hoverable={false}>
+      <div className="p-5">
+        <div className="flex items-center justify-between mb-4">
+          <div className="flex items-center gap-2">
+            <FlaskConical className="w-4 h-4 text-[#8B5CF6]" />
+            <h2 className="text-sm font-semibold text-[#F8FAFC]">Alternative Scenarios Considered</h2>
+            <span className="text-[10px] text-[#64748B]">{runs.length} simulations</span>
+          </div>
+          <a href="/m/counterfactual" className="text-[10px] text-[#8B5CF6] hover:underline">View all</a>
+        </div>
+        <div className="space-y-2">
+          {runs.slice(0, 3).map((run) => (
+            <div key={run.id} className="flex items-center justify-between p-3 rounded-lg bg-white/[0.02] hover:bg-white/[0.04] transition-colors">
+              <div className="flex-1 min-w-0">
+                <p className="text-xs text-[#F8FAFC]">
+                  <span className="font-medium">{run.parameterLabel}</span>
+                  <span className="text-[#64748B]"> → </span>
+                  <span className="text-[#A78BFA]">{run.newValue}</span>
+                </p>
+                <p className="text-[10px] text-[#64748B] mt-0.5">
+                  Cost {run.delta.costDeltaPct > 0 ? '+' : ''}{run.delta.costDeltaPct}% · Readiness {run.delta.readinessDelta > 0 ? '+' : ''}{run.delta.readinessDelta}
+                  {run.delta.costDeltaPct > 15 || run.delta.readinessDelta < -5
+                    ? ' · Recommendation unchanged'
+                    : run.delta.costDeltaPct < -5 ? ' · Alternative worth exploring' : ' · Comparable'}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </NeonCard>
   );
 }
 

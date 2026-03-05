@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { getModules, type ModuleConfig } from '@/utils/moduleRegistry';
 import AgentNavItem from './AgentNavItem';
-import { Settings, Home, Clock, FileText, GitBranch, FlaskConical, Radio } from 'lucide-react';
+import { Settings, Home, Clock, FileText, GitBranch, FlaskConical, Radio, Beaker } from 'lucide-react';
 
 export default function ConsoleSidebar() {
   const pathname = usePathname();
@@ -13,6 +13,7 @@ export default function ConsoleSidebar() {
   const toolLinks = [
     { href: '/m/brief', label: 'Decision Brief', icon: '📋', lucide: FileText },
     { href: '/m/intelligence', label: 'Market Intelligence', icon: '📡', lucide: Radio },
+    { href: '/m/counterfactual', label: 'What-If Simulator', icon: '🧪', lucide: Beaker },
     { href: '/m/graph', label: 'Scenario Graph', icon: '🔀', lucide: GitBranch },
     { href: '/m/experiments', label: 'Experiments', icon: '⏱', lucide: Clock },
     { href: '/scenario-studio', label: 'Scenario Studio', icon: '🧪', lucide: FlaskConical },

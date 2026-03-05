@@ -60,7 +60,7 @@ export default function ExperimentTimeline({
         </div>
       )}
 
-      <div>
+      <div data-tour="timeline-event">
         {displayed.map((event, i) => (
           <ExperimentCard key={event.id} event={event} index={i} />
         ))}

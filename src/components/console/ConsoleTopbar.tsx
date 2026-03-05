@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Sparkles, FileText, GitBranch, Clock, Download, Radio } from 'lucide-react';
+import { Sparkles, FileText, GitBranch, Clock, Download, Radio, FlaskConical, Play } from 'lucide-react';
 import ScenarioSelector from './ScenarioSelector';
 import { useScenarioStore } from '@/store/scenarioStore';
 import { useExportStore } from '@/store/exportStore';
@@ -44,6 +44,13 @@ export default function ConsoleTopbar() {
           Intel
         </Link>
         <Link
+          href="/m/counterfactual"
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-white/[0.05] transition-all"
+        >
+          <FlaskConical className="w-3.5 h-3.5" />
+          What-If
+        </Link>
+        <Link
           href="/m/experiments"
           className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-white/[0.05] transition-all"
         >
@@ -66,6 +73,14 @@ export default function ConsoleTopbar() {
             Export
           </button>
         )}
+        <div className="h-4 w-px bg-white/[0.06] mx-1" />
+        <Link
+          href="/guided-tour"
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs text-[#A78BFA] hover:bg-[#A78BFA]/10 transition-all font-medium"
+        >
+          <Play className="w-3 h-3" />
+          Tour
+        </Link>
       </div>
     </header>
   );

@@ -29,6 +29,7 @@ export default function ScenarioSelector() {
     <div ref={ref} className="relative">
       <button
         onClick={() => setOpen(!open)}
+        data-tour="scenario-selector"
         className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/[0.04] border border-white/[0.08] hover:bg-white/[0.06] transition-all text-xs"
       >
         <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />

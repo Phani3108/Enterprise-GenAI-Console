@@ -87,8 +87,8 @@ export default function HomePage() {
                 Launch AI Strategy Console
                 <ArrowRight className="w-4 h-4" />
               </GlowButton>
-              <GlowButton href="#agents" variant="secondary" size="lg">
-                Explore Agents
+              <GlowButton href="/guided-tour" variant="secondary" size="lg">
+                Guided Tour (45s)
               </GlowButton>
             </motion.div>
           </motion.div>
