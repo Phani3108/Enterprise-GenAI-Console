@@ -44,10 +44,30 @@ Decision history log — every agent run creates a timestamped, replayable exper
 
 ![Experiment Timeline](docs/screenshots/06-experiment-timeline.png)
 
-### Module Embedding (Agent Frame)
-Seamless iframe embedding with loading skeleton, postMessage bridge, copy link, export, and fullscreen — tools feel native inside the console.
+### Cost Intelligence Agent (embedded)
+Full 6-layer cost simulator running inside the console — workload configuration, model comparison, architecture diagrams, and optimization insights.
 
-![Module Embed](docs/screenshots/07-module-embed-cost.png)
+![Cost Agent](docs/screenshots/07-module-embed-cost.png)
+
+### Platform Decision Agent (embedded)
+5 evaluation engines comparing Vertex AI vs Azure OpenAI vs AWS Bedrock with weighted scoring, capability matrix, lock-in analysis, and migration estimator.
+
+![Platform Agent](docs/screenshots/08-module-embed-platform.png)
+
+### Architecture Studio Agent (embedded)
+Generate production-grade Vertex AI architectures with diagrams, blueprints, security plans, and cost estimates for 10 AI use cases across 3 tiers.
+
+![Architecture Agent](docs/screenshots/09-module-embed-architecture.png)
+
+### Enterprise Transformation Agent (embedded)
+6-step guided AI readiness assessment — institution profiling, capability scoring, risk landscape, maturity gauge, adoption roadmap, and investment planning.
+
+![Readiness Agent](docs/screenshots/10-module-embed-readiness.png)
+
+### Product Strategy Agent (embedded)
+Codelabs-style strategy lab — problem definition, product concept, market positioning, friction analysis, pricing models, and phased launch timeline.
+
+![Strategy Agent](docs/screenshots/11-module-embed-strategy.png)
 
 ---
 
