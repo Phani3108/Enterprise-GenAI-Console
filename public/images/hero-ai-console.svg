@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <defs>
+    <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4F46E5" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#4F46E5" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="line-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4F46E5" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0.6"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="400" cy="250" rx="300" ry="200" fill="url(#glow1)"/>
+  <ellipse cx="500" cy="300" rx="200" ry="150" fill="url(#glow2)"/>
+  <!-- Central node -->
+  <circle cx="400" cy="250" r="40" stroke="#4F46E5" stroke-width="2" fill="#0F172A"/>
+  <circle cx="400" cy="250" r="15" fill="#4F46E5" opacity="0.6"/>
+  <text x="400" y="255" text-anchor="middle" fill="#F8FAFC" font-size="10" font-family="system-ui">AI</text>
+  <!-- Agent nodes -->
+  <circle cx="220" cy="160" r="28" stroke="#06B6D4" stroke-width="1.5" fill="#0F172A"/>
+  <text x="220" y="164" text-anchor="middle" fill="#06B6D4" font-size="8" font-family="system-ui">COST</text>
+  <circle cx="580" cy="160" r="28" stroke="#3B82F6" stroke-width="1.5" fill="#0F172A"/>
+  <text x="580" y="164" text-anchor="middle" fill="#3B82F6" font-size="7" font-family="system-ui">PLATFORM</text>
+  <circle cx="220" cy="350" r="28" stroke="#8B5CF6" stroke-width="1.5" fill="#0F172A"/>
+  <text x="220" y="354" text-anchor="middle" fill="#8B5CF6" font-size="7" font-family="system-ui">READINESS</text>
+  <circle cx="580" cy="350" r="28" stroke="#EC4899" stroke-width="1.5" fill="#0F172A"/>
+  <text x="580" y="354" text-anchor="middle" fill="#EC4899" font-size="7" font-family="system-ui">STRATEGY</text>
+  <circle cx="400" cy="100" r="28" stroke="#4F46E5" stroke-width="1.5" fill="#0F172A"/>
+  <text x="400" y="104" text-anchor="middle" fill="#4F46E5" font-size="8" font-family="system-ui">ARCH</text>
+  <!-- Connections -->
+  <line x1="248" y1="175" x2="365" y2="235" stroke="url(#line-grad)" stroke-width="1" opacity="0.5"/>
+  <line x1="552" y1="175" x2="435" y2="235" stroke="url(#line-grad)" stroke-width="1" opacity="0.5"/>
+  <line x1="248" y1="335" x2="365" y2="265" stroke="url(#line-grad)" stroke-width="1" opacity="0.5"/>
+  <line x1="552" y1="335" x2="435" y2="265" stroke="url(#line-grad)" stroke-width="1" opacity="0.5"/>
+  <line x1="400" y1="128" x2="400" y2="210" stroke="url(#line-grad)" stroke-width="1" opacity="0.5"/>
+  <!-- Orbital dots -->
+  <circle cx="310" cy="195" r="3" fill="#4F46E5" opacity="0.4"/>
+  <circle cx="490" cy="195" r="3" fill="#3B82F6" opacity="0.4"/>
+  <circle cx="310" cy="305" r="3" fill="#8B5CF6" opacity="0.4"/>
+  <circle cx="490" cy="305" r="3" fill="#EC4899" opacity="0.4"/>
+</svg>

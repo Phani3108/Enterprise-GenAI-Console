@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AI Strategy Scenario",
+  "type": "object",
+  "properties": {
+    "institutionType": {
+      "type": "string",
+      "enum": ["tier1-bank", "tier2-bank", "credit-union", "insurance", "fintech", "wealth-management"]
+    },
+    "useCase": {
+      "type": "string",
+      "description": "Primary AI use case"
+    },
+    "scale": {
+      "type": "string",
+      "enum": ["startup", "growth", "enterprise", "hyperscale"]
+    },
+    "region": {
+      "type": "string",
+      "enum": ["north-america", "europe", "asia-pacific", "middle-east", "global"]
+    },
+    "budget": {
+      "type": "string",
+      "enum": ["under-50k", "50k-200k", "200k-1m", "1m-5m", "over-5m"]
+    },
+    "timeline": {
+      "type": "string",
+      "enum": ["3-months", "6-months", "12-months", "18-months"]
+    },
+    "priorities": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["cost-optimization", "compliance", "performance", "time-to-market", "scalability", "security"]
+      }
+    }
+  },
+  "required": ["institutionType", "useCase", "scale"]
+}

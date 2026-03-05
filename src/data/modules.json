@@ -1,0 +1,67 @@
+[
+  {
+    "id": "cost",
+    "name": "Cost Intelligence Agent",
+    "shortName": "Cost",
+    "description": "Simulate GenAI deployment costs across platforms, scale projections, and optimize infrastructure spend for financial institutions.",
+    "icon": "cost",
+    "color": "#06B6D4",
+    "port": 3001,
+    "path": "/simulator",
+    "tool": "GenAI Cost Simulator",
+    "route": "/m/cost",
+    "repo": "https://github.com/Phani3108/GenAICostCalulator"
+  },
+  {
+    "id": "platform",
+    "name": "Platform Decision Agent",
+    "shortName": "Platform",
+    "description": "Compare Vertex AI, Azure OpenAI, and AWS Bedrock with weighted scoring tailored for enterprise banking requirements.",
+    "icon": "platform",
+    "color": "#3B82F6",
+    "port": 3002,
+    "path": "/platform-comparator",
+    "tool": "Platform Comparator",
+    "route": "/m/platform",
+    "repo": "https://github.com/Phani3108/AIPlatformComparator"
+  },
+  {
+    "id": "architecture",
+    "name": "Architecture Studio Agent",
+    "shortName": "Architecture",
+    "description": "Generate production-grade AI architecture blueprints with Vertex AI integration, vector search, and enterprise patterns.",
+    "icon": "architecture",
+    "color": "#4F46E5",
+    "port": 3003,
+    "path": "/vertex-architecture",
+    "tool": "Vertex AI Architecture Generator",
+    "route": "/m/architecture",
+    "repo": "https://github.com/Phani3108/VertexAIArchitectureGenerator"
+  },
+  {
+    "id": "readiness",
+    "name": "Enterprise Transformation Agent",
+    "shortName": "Readiness",
+    "description": "Assess organizational AI readiness across data, governance, talent, infrastructure, and strategy dimensions.",
+    "icon": "readiness",
+    "color": "#8B5CF6",
+    "port": 3004,
+    "path": "/enterprise-ai-readiness",
+    "tool": "Enterprise AI Analyzer",
+    "route": "/m/readiness",
+    "repo": "https://github.com/Phani3108/Enterprise-AI-Analyzer---Banking"
+  },
+  {
+    "id": "strategy",
+    "name": "Product Strategy Agent",
+    "shortName": "Strategy",
+    "description": "Create go-to-market strategies with competitive positioning, pricing models, and phased launch timelines.",
+    "icon": "strategy",
+    "color": "#EC4899",
+    "port": 3005,
+    "path": "/ai-product-strategy-lab",
+    "tool": "Launch Strategy Generator",
+    "route": "/m/strategy",
+    "repo": "https://github.com/Phani3108/AI-Product-Strategy-Lab---Financial-Institutions"
+  }
+]

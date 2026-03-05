@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 400 200" fill="none">
+  <rect width="400" height="200" rx="12" fill="#0B1020"/>
+  <!-- Flow boxes -->
+  <rect x="20" y="75" width="80" height="50" rx="8" fill="#06B6D4" opacity="0.1" stroke="#06B6D4" stroke-width="1"/>
+  <text x="60" y="95" text-anchor="middle" fill="#06B6D4" font-size="8" font-family="system-ui">Scenario</text>
+  <text x="60" y="110" text-anchor="middle" fill="#64748B" font-size="7" font-family="system-ui">Config</text>
+  <path d="M100 100 L120 100" stroke="#4F46E5" stroke-width="1" opacity="0.4" marker-end="url(#arrow)"/>
+  <rect x="120" y="75" width="80" height="50" rx="8" fill="#3B82F6" opacity="0.1" stroke="#3B82F6" stroke-width="1"/>
+  <text x="160" y="95" text-anchor="middle" fill="#3B82F6" font-size="8" font-family="system-ui">Platform</text>
+  <text x="160" y="110" text-anchor="middle" fill="#64748B" font-size="7" font-family="system-ui">Analysis</text>
+  <path d="M200 100 L220 100" stroke="#4F46E5" stroke-width="1" opacity="0.4"/>
+  <rect x="220" y="75" width="80" height="50" rx="8" fill="#4F46E5" opacity="0.1" stroke="#4F46E5" stroke-width="1"/>
+  <text x="260" y="95" text-anchor="middle" fill="#4F46E5" font-size="8" font-family="system-ui">Architecture</text>
+  <text x="260" y="110" text-anchor="middle" fill="#64748B" font-size="7" font-family="system-ui">Generation</text>
+  <path d="M300 100 L320 100" stroke="#4F46E5" stroke-width="1" opacity="0.4"/>
+  <rect x="320" y="75" width="60" height="50" rx="8" fill="#22D3EE" opacity="0.1" stroke="#22D3EE" stroke-width="1"/>
+  <text x="350" y="95" text-anchor="middle" fill="#22D3EE" font-size="8" font-family="system-ui">Decision</text>
+  <text x="350" y="110" text-anchor="middle" fill="#64748B" font-size="7" font-family="system-ui">Brief</text>
+  <!-- Bottom label -->
+  <text x="200" y="160" text-anchor="middle" fill="#94A3B8" font-size="10" font-family="system-ui">Enterprise AI Decision Pipeline</text>
+  <text x="200" y="175" text-anchor="middle" fill="#64748B" font-size="8" font-family="system-ui">Automated multi-agent orchestration for banking</text>
+</svg>

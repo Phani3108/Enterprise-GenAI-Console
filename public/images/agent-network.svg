@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" rx="12" fill="#0B1020"/>
+  <!-- Central node -->
+  <circle cx="200" cy="150" r="30" fill="#4F46E5" opacity="0.2" stroke="#4F46E5" stroke-width="1.5"/>
+  <circle cx="200" cy="150" r="8" fill="#4F46E5"/>
+  <!-- Agent nodes -->
+  <circle cx="80" cy="80" r="16" fill="#06B6D4" opacity="0.15" stroke="#06B6D4" stroke-width="1"/>
+  <circle cx="80" cy="80" r="5" fill="#06B6D4"/>
+  <circle cx="320" cy="80" r="16" fill="#3B82F6" opacity="0.15" stroke="#3B82F6" stroke-width="1"/>
+  <circle cx="320" cy="80" r="5" fill="#3B82F6"/>
+  <circle cx="80" cy="220" r="16" fill="#8B5CF6" opacity="0.15" stroke="#8B5CF6" stroke-width="1"/>
+  <circle cx="80" cy="220" r="5" fill="#8B5CF6"/>
+  <circle cx="320" cy="220" r="16" fill="#EC4899" opacity="0.15" stroke="#EC4899" stroke-width="1"/>
+  <circle cx="320" cy="220" r="5" fill="#EC4899"/>
+  <circle cx="200" cy="40" r="16" fill="#22D3EE" opacity="0.15" stroke="#22D3EE" stroke-width="1"/>
+  <circle cx="200" cy="40" r="5" fill="#22D3EE"/>
+  <!-- Connections -->
+  <line x1="200" y1="150" x2="80" y2="80" stroke="#4F46E5" stroke-width="0.5" opacity="0.3"/>
+  <line x1="200" y1="150" x2="320" y2="80" stroke="#4F46E5" stroke-width="0.5" opacity="0.3"/>
+  <line x1="200" y1="150" x2="80" y2="220" stroke="#4F46E5" stroke-width="0.5" opacity="0.3"/>
+  <line x1="200" y1="150" x2="320" y2="220" stroke="#4F46E5" stroke-width="0.5" opacity="0.3"/>
+  <line x1="200" y1="150" x2="200" y2="40" stroke="#4F46E5" stroke-width="0.5" opacity="0.3"/>
+  <!-- Labels -->
+  <text x="80" y="115" text-anchor="middle" fill="#94A3B8" font-size="9" font-family="system-ui">Cost Agent</text>
+  <text x="320" y="115" text-anchor="middle" fill="#94A3B8" font-size="9" font-family="system-ui">Platform Agent</text>
+  <text x="80" y="255" text-anchor="middle" fill="#94A3B8" font-size="9" font-family="system-ui">Readiness Agent</text>
+  <text x="320" y="255" text-anchor="middle" fill="#94A3B8" font-size="9" font-family="system-ui">Strategy Agent</text>
+  <text x="200" y="20" text-anchor="middle" fill="#94A3B8" font-size="9" font-family="system-ui">Architecture Agent</text>
+  <text x="200" y="175" text-anchor="middle" fill="#F8FAFC" font-size="10" font-weight="bold" font-family="system-ui">Console</text>
+</svg>

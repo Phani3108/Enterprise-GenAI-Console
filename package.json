@@ -1,0 +1,33 @@
+{
+  "name": "enterprise-genai-console",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000",
+    "lint": "eslint",
+    "dev:all": "concurrently -n console,cost,platform,arch,readiness,strategy -c cyan,blue,magenta,green,yellow,red \"next dev -p 3000\" \"npm run --prefix \\\"../GenAI Cost Simulator\\\" dev -- -p 3001\" \"npm run --prefix \\\"../Platform Comparator\\\" dev -- -p 3002\" \"npm run --prefix \\\"../Vertex AI Architecture Generator\\\" dev -- -p 3003\" \"npm run --prefix \\\"../Enterprise AI Analyzer\\\" dev -- -p 3004\" \"npm run --prefix \\\"../Launch Strategy Generator\\\" dev -- -p 3005\""
+  },
+  "dependencies": {
+    "@xyflow/react": "^12.10.1",
+    "concurrently": "^9.2.1",
+    "framer-motion": "^12.35.0",
+    "lucide-react": "^0.577.0",
+    "next": "16.1.6",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "zustand": "^5.0.11"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.6",
+    "playwright": "^1.58.2",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
