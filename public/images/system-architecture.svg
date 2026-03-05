@@ -19,7 +19,7 @@
   <!-- Console box -->
   <rect x="250" y="60" width="400" height="100" rx="12" fill="url(#consoleGrad)" stroke="#4F46E5" stroke-width="1.5" stroke-dasharray="4"/>
   <text x="450" y="90" text-anchor="middle" fill="#F8FAFC" font-size="13" font-weight="bold" font-family="system-ui">Enterprise GenAI Console</text>
-  <text x="450" y="108" text-anchor="middle" fill="#94A3B8" font-size="9" font-family="system-ui">Next.js · Zustand · Framer Motion · ReactFlow</text>
+  <text x="450" y="108" text-anchor="middle" fill="#94A3B8" font-size="9" font-family="system-ui">Next.js ï¿½ Zustand ï¿½ Framer Motion ï¿½ ReactFlow</text>
 
   <!-- Console internal blocks -->
   <rect x="268" y="120" width="70" height="26" rx="5" fill="#4F46E5" opacity="0.2" stroke="#4F46E5" stroke-width="0.5"/>
@@ -60,7 +60,7 @@
   <!-- Agent 2: Platform -->
   <rect x="200" y="280" width="140" height="90" rx="10" fill="#3B82F6" opacity="0.08" stroke="#3B82F6" stroke-width="1"/>
   <circle cx="225" cy="305" r="10" fill="#3B82F6" opacity="0.2"/>
-  <text x="225" y="309" text-anchor="middle" fill="#3B82F6" font-size="9" font-family="system-ui">–</text>
+  <text x="225" y="309" text-anchor="middle" fill="#3B82F6" font-size="9" font-family="system-ui">ï¿½</text>
   <text x="280" y="308" text-anchor="middle" fill="#F8FAFC" font-size="10" font-weight="bold" font-family="system-ui">Platform Agent</text>
   <text x="270" y="325" text-anchor="middle" fill="#64748B" font-size="7" font-family="system-ui">AI Platform Decision Engine</text>
   <text x="270" y="340" text-anchor="middle" fill="#3B82F6" font-size="8" font-family="system-ui">:3002</text>
@@ -69,11 +69,11 @@
   <!-- Agent 3: Architecture -->
   <rect x="380" y="280" width="140" height="90" rx="10" fill="#4F46E5" opacity="0.08" stroke="#4F46E5" stroke-width="1"/>
   <circle cx="405" cy="305" r="10" fill="#4F46E5" opacity="0.2"/>
-  <text x="405" y="309" text-anchor="middle" fill="#4F46E5" font-size="9" font-family="system-ui">Ç</text>
+  <text x="405" y="309" text-anchor="middle" fill="#4F46E5" font-size="9" font-family="system-ui">ï¿½</text>
   <text x="460" y="308" text-anchor="middle" fill="#F8FAFC" font-size="10" font-weight="bold" font-family="system-ui">Architecture Agent</text>
   <text x="450" y="325" text-anchor="middle" fill="#64748B" font-size="7" font-family="system-ui">Vertex AI Architecture Gen</text>
   <text x="450" y="340" text-anchor="middle" fill="#4F46E5" font-size="8" font-family="system-ui">:3003</text>
-  <text x="450" y="358" text-anchor="middle" fill="#475569" font-size="7" font-family="system-ui">10 use cases · 3 tiers</text>
+  <text x="450" y="358" text-anchor="middle" fill="#475569" font-size="7" font-family="system-ui">10 use cases ï¿½ 3 tiers</text>
 
   <!-- Agent 4: Readiness -->
   <rect x="560" y="280" width="140" height="90" rx="10" fill="#8B5CF6" opacity="0.08" stroke="#8B5CF6" stroke-width="1"/>
@@ -87,7 +87,7 @@
   <!-- Agent 5: Strategy -->
   <rect x="740" y="280" width="140" height="90" rx="10" fill="#EC4899" opacity="0.08" stroke="#EC4899" stroke-width="1"/>
   <circle cx="765" cy="305" r="10" fill="#EC4899" opacity="0.2"/>
-  <text x="765" y="309" text-anchor="middle" fill="#EC4899" font-size="9" font-family="system-ui">’</text>
+  <text x="765" y="309" text-anchor="middle" fill="#EC4899" font-size="9" font-family="system-ui">ï¿½</text>
   <text x="820" y="308" text-anchor="middle" fill="#F8FAFC" font-size="10" font-weight="bold" font-family="system-ui">Strategy Agent</text>
   <text x="810" y="325" text-anchor="middle" fill="#64748B" font-size="7" font-family="system-ui">AI Product Strategy Lab</text>
   <text x="810" y="340" text-anchor="middle" fill="#EC4899" font-size="8" font-family="system-ui">:3005</text>
@@ -96,13 +96,13 @@
   <!-- Bottom: Export Store + Brief -->
   <rect x="180" y="420" width="200" height="70" rx="10" fill="#22C55E" opacity="0.08" stroke="#22C55E" stroke-width="1"/>
   <text x="280" y="448" text-anchor="middle" fill="#F8FAFC" font-size="11" font-weight="bold" font-family="system-ui">Export Store</text>
-  <text x="280" y="465" text-anchor="middle" fill="#64748B" font-size="8" font-family="system-ui">scenarioId ’ toolId ’ payload</text>
+  <text x="280" y="465" text-anchor="middle" fill="#64748B" font-size="8" font-family="system-ui">scenarioId ï¿½ toolId ï¿½ payload</text>
   <text x="280" y="479" text-anchor="middle" fill="#22C55E" font-size="8" font-family="system-ui">localStorage persisted</text>
 
   <rect x="520" y="420" width="200" height="70" rx="10" fill="#22D3EE" opacity="0.08" stroke="#22D3EE" stroke-width="1"/>
   <text x="620" y="448" text-anchor="middle" fill="#F8FAFC" font-size="11" font-weight="bold" font-family="system-ui">Decision Brief</text>
-  <text x="620" y="465" text-anchor="middle" fill="#64748B" font-size="8" font-family="system-ui">Aggregated export ’ executive report</text>
-  <text x="620" y="479" text-anchor="middle" fill="#22D3EE" font-size="8" font-family="system-ui">Copy · Download JSON · Timeline</text>
+  <text x="620" y="465" text-anchor="middle" fill="#64748B" font-size="8" font-family="system-ui">Aggregated export ï¿½ executive report</text>
+  <text x="620" y="479" text-anchor="middle" fill="#22D3EE" font-size="8" font-family="system-ui">Copy ï¿½ Download JSON ï¿½ Timeline</text>
 
   <!-- Arrows from agents to export store -->
   <path d="M90 370 L280 420" stroke="#22C55E" stroke-width="0.6" opacity="0.3"/>
@@ -121,5 +121,5 @@
 
   <!-- Labels -->
   <text x="450" y="250" text-anchor="middle" fill="#64748B" font-size="8" font-family="system-ui">iframe embed + postMessage handshake + origin validation</text>
-  <text x="450" y="403" text-anchor="middle" fill="#64748B" font-size="8" font-family="system-ui">TOOL_EXPORT events flow to Export Store ’ compose Brief</text>
+  <text x="450" y="403" text-anchor="middle" fill="#64748B" font-size="8" font-family="system-ui">TOOL_EXPORT events flow to Export Store ï¿½ compose Brief</text>
 </svg>

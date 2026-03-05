@@ -14,9 +14,10 @@ import { getCostExplanation } from '@/lib/explanations/costExplanation';
 import { getArchitectureExplanation } from '@/lib/explanations/architectureExplanation';
 import { copyToClipboard } from '@/utils/clipboard';
 import { fadeInUp, staggerContainer } from '@/styles/motion';
+import { useIntelligenceStore } from '@/store/intelligenceStore';
 import {
   FileText, Shield, TrendingUp, AlertTriangle, Rocket, Server,
-  DollarSign, BarChart3, Download, ClipboardCopy, Check, Clock,
+  DollarSign, BarChart3, Download, ClipboardCopy, Check, Clock, Radio,
 } from 'lucide-react';
 
 export default function BriefPage() {
@@ -265,8 +266,13 @@ export default function BriefPage() {
             </NeonCard>
           </motion.div>
 
-          {/* Decision Timeline */}
+          {/* Market Signals */}
           <motion.div variants={fadeInUp} custom={7} className="mt-6">
+            <MarketSignalsSection />
+          </motion.div>
+
+          {/* Decision Timeline */}
+          <motion.div variants={fadeInUp} custom={8} className="mt-6">
             <NeonCard color="#F59E0B" hoverable={false}>
               <div className="p-5">
                 <div className="flex items-center gap-2 mb-4">
@@ -280,5 +286,38 @@ export default function BriefPage() {
         </motion.div>
       </div>
     </ConsoleLayout>
+  );
+}
+
+function MarketSignalsSection() {
+  const { insights } = useIntelligenceStore();
+  const relevant = insights.filter((i) => i.scoreImpact > 0).slice(0, 4);
+
+  if (relevant.length === 0) return null;
+
+  return (
+    <NeonCard color="#A78BFA" hoverable={false}>
+      <div className="p-5">
+        <div className="flex items-center gap-2 mb-4">
+          <Radio className="w-4 h-4 text-[#A78BFA]" />
+          <h2 className="text-sm font-semibold text-[#F8FAFC]">Market Signals Influencing Decision</h2>
+          <span className="px-1.5 py-0.5 rounded-full bg-[#A78BFA]/10 text-[#A78BFA] text-[8px] font-medium">LIVE</span>
+        </div>
+        <div className="space-y-2">
+          {relevant.map((insight) => (
+            <div key={insight.id} className="flex items-start gap-3 p-3 rounded-lg bg-white/[0.02] hover:bg-white/[0.04] transition-colors">
+              <div className="w-6 h-6 rounded-md flex items-center justify-center shrink-0 bg-[#A78BFA]/10 text-[#A78BFA] text-[10px] font-bold mt-0.5">
+                +{insight.scoreImpact}
+              </div>
+              <div className="flex-1 min-w-0">
+                <p className="text-xs font-medium text-[#F8FAFC]">{insight.title}</p>
+                <p className="text-[10px] text-[#64748B] mt-0.5">{insight.impact}</p>
+              </div>
+              <span className="text-[9px] text-[#64748B] shrink-0">{insight.affectedPlatform}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </NeonCard>
   );
 }

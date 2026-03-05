@@ -1,0 +1,90 @@
+[
+  {
+    "vendor": "Google",
+    "model": "Gemini 2.0 Flash",
+    "inputCost": 0.10,
+    "outputCost": 0.40,
+    "embeddingCost": 0.00,
+    "unit": "per 1M tokens",
+    "lastUpdated": "2025-02-05",
+    "trend": "decreasing",
+    "note": "10x cheaper than GPT-4o for input"
+  },
+  {
+    "vendor": "Google",
+    "model": "Gemini 1.5 Pro",
+    "inputCost": 1.25,
+    "outputCost": 5.00,
+    "embeddingCost": 0.00,
+    "unit": "per 1M tokens",
+    "lastUpdated": "2024-09-24",
+    "trend": "stable",
+    "note": "Premium tier for complex tasks"
+  },
+  {
+    "vendor": "OpenAI",
+    "model": "GPT-4.1",
+    "inputCost": 2.00,
+    "outputCost": 8.00,
+    "embeddingCost": 0.10,
+    "unit": "per 1M tokens",
+    "lastUpdated": "2025-04-14",
+    "trend": "decreasing",
+    "note": "12x cheaper than original GPT-4"
+  },
+  {
+    "vendor": "OpenAI",
+    "model": "GPT-4o",
+    "inputCost": 2.50,
+    "outputCost": 10.00,
+    "embeddingCost": 0.10,
+    "unit": "per 1M tokens",
+    "lastUpdated": "2024-05-13",
+    "trend": "stable",
+    "note": "Standard enterprise pricing"
+  },
+  {
+    "vendor": "Anthropic",
+    "model": "Claude 4 Sonnet",
+    "inputCost": 3.00,
+    "outputCost": 15.00,
+    "embeddingCost": 0.00,
+    "unit": "per 1M tokens",
+    "lastUpdated": "2025-05-22",
+    "trend": "stable",
+    "note": "Premium pricing for coding capability"
+  },
+  {
+    "vendor": "Anthropic",
+    "model": "Claude 3.5 Sonnet",
+    "inputCost": 3.00,
+    "outputCost": 15.00,
+    "embeddingCost": 0.00,
+    "unit": "per 1M tokens",
+    "lastUpdated": "2024-06-20",
+    "trend": "stable",
+    "note": "Unchanged since launch"
+  },
+  {
+    "vendor": "Google",
+    "model": "text-embedding-005",
+    "inputCost": 0.00,
+    "outputCost": 0.00,
+    "embeddingCost": 0.000025,
+    "unit": "per 1K tokens",
+    "lastUpdated": "2025-01-15",
+    "trend": "decreasing",
+    "note": "Free tier available; lowest embedding cost"
+  },
+  {
+    "vendor": "OpenAI",
+    "model": "text-embedding-3-large",
+    "inputCost": 0.00,
+    "outputCost": 0.00,
+    "embeddingCost": 0.13,
+    "unit": "per 1M tokens",
+    "lastUpdated": "2024-01-25",
+    "trend": "stable",
+    "note": "3072 dimensions, strong retrieval"
+  }
+]

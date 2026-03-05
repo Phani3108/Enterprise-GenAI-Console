@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Sparkles, FileText, GitBranch, Clock, Download } from 'lucide-react';
+import { Sparkles, FileText, GitBranch, Clock, Download, Radio } from 'lucide-react';
 import ScenarioSelector from './ScenarioSelector';
 import { useScenarioStore } from '@/store/scenarioStore';
 import { useExportStore } from '@/store/exportStore';
@@ -35,6 +35,13 @@ export default function ConsoleTopbar() {
         >
           <FileText className="w-3.5 h-3.5" />
           Brief
+        </Link>
+        <Link
+          href="/m/intelligence"
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-white/[0.05] transition-all"
+        >
+          <Radio className="w-3.5 h-3.5" />
+          Intel
         </Link>
         <Link
           href="/m/experiments"

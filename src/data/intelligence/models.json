@@ -1,0 +1,82 @@
+[
+  {
+    "vendor": "Google",
+    "model": "Gemini 2.0 Flash",
+    "releaseDate": "2025-02-05",
+    "contextWindow": 2000000,
+    "latencyMs": 120,
+    "strengths": ["2M context window", "Multi-modal native", "Grounding with Google Search", "Structured output"],
+    "platform": "Vertex AI",
+    "note": "Best-in-class context for large RAG workloads"
+  },
+  {
+    "vendor": "Google",
+    "model": "Gemini 1.5 Pro",
+    "releaseDate": "2024-09-24",
+    "contextWindow": 2000000,
+    "latencyMs": 280,
+    "strengths": ["Deep reasoning", "Long document analysis", "Code generation", "Multi-modal"],
+    "platform": "Vertex AI",
+    "note": "Production workhorse for enterprise use cases"
+  },
+  {
+    "vendor": "OpenAI",
+    "model": "GPT-4.1",
+    "releaseDate": "2025-04-14",
+    "contextWindow": 1000000,
+    "latencyMs": 180,
+    "strengths": ["Improved instruction following", "Coding proficiency", "Long context agentic tasks", "12x cheaper than GPT-4"],
+    "platform": "Azure OpenAI",
+    "note": "Major cost reduction with maintained quality"
+  },
+  {
+    "vendor": "OpenAI",
+    "model": "GPT-4o",
+    "releaseDate": "2024-05-13",
+    "contextWindow": 128000,
+    "latencyMs": 200,
+    "strengths": ["Omni-modal", "Fast inference", "Mature ecosystem", "Function calling"],
+    "platform": "Azure OpenAI",
+    "note": "Widely adopted enterprise baseline"
+  },
+  {
+    "vendor": "Anthropic",
+    "model": "Claude 4 Sonnet",
+    "releaseDate": "2025-05-22",
+    "contextWindow": 200000,
+    "latencyMs": 160,
+    "strengths": ["Coding excellence", "Extended thinking", "Memory capabilities", "Tool use"],
+    "platform": "AWS Bedrock",
+    "note": "Strongest coding model in market"
+  },
+  {
+    "vendor": "Anthropic",
+    "model": "Claude 3.5 Sonnet",
+    "releaseDate": "2024-06-20",
+    "contextWindow": 200000,
+    "latencyMs": 190,
+    "strengths": ["Strong reasoning", "Writing quality", "Safety alignment", "Consistent outputs"],
+    "platform": "AWS Bedrock",
+    "note": "Reliable enterprise choice"
+  },
+  {
+    "vendor": "Meta",
+    "model": "Llama 4 Scout",
+    "releaseDate": "2025-04-05",
+    "contextWindow": 10000000,
+    "latencyMs": 250,
+    "strengths": ["10M context (MoE)", "Open weights", "Self-hostable", "109B active params"],
+    "platform": "Self-hosted / Vertex AI",
+    "note": "Open-source leader with massive context"
+  },
+  {
+    "vendor": "Google",
+    "model": "Gemma 3",
+    "releaseDate": "2025-03-12",
+    "contextWindow": 128000,
+    "latencyMs": 80,
+    "strengths": ["Lightweight", "On-device capable", "Open weights", "Multi-modal"],
+    "platform": "Vertex AI / Self-hosted",
+    "note": "Edge deployment and fine-tuning friendly"
+  }
+]

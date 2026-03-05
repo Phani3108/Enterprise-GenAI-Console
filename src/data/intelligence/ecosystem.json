@@ -1,0 +1,66 @@
+[
+  {
+    "vendor": "Google",
+    "platform": "Vertex AI",
+    "githubRepos": 48,
+    "sdkUpdates": 14,
+    "communityActivity": "high",
+    "keyUpdates": [
+      "Vertex AI Agent Builder GA",
+      "Gemini API in LangChain 0.3",
+      "Vector Search auto-scaling",
+      "Grounding with Google Search"
+    ],
+    "devSatisfaction": 4.2,
+    "docsQuality": "strong",
+    "enterpriseAdoptions": 320
+  },
+  {
+    "vendor": "OpenAI",
+    "platform": "Azure OpenAI",
+    "githubRepos": 42,
+    "sdkUpdates": 18,
+    "communityActivity": "high",
+    "keyUpdates": [
+      "Responses API (replaces Assistants)",
+      "GPT-4.1 turbo launch",
+      "Realtime API GA",
+      "Codex CLI open-sourced"
+    ],
+    "devSatisfaction": 4.4,
+    "docsQuality": "excellent",
+    "enterpriseAdoptions": 480
+  },
+  {
+    "vendor": "AWS",
+    "platform": "Bedrock",
+    "githubRepos": 24,
+    "sdkUpdates": 9,
+    "communityActivity": "medium",
+    "keyUpdates": [
+      "Bedrock Agents GA",
+      "Nova models launched",
+      "Guardrails for Bedrock",
+      "Knowledge Bases with OpenSearch"
+    ],
+    "devSatisfaction": 3.8,
+    "docsQuality": "good",
+    "enterpriseAdoptions": 190
+  },
+  {
+    "vendor": "Meta",
+    "platform": "Open Source (Llama)",
+    "githubRepos": 35,
+    "sdkUpdates": 6,
+    "communityActivity": "high",
+    "keyUpdates": [
+      "Llama 4 Scout & Maverick release",
+      "Llama Stack standardized",
+      "VLLM optimized serving",
+      "10M context via MoE"
+    ],
+    "devSatisfaction": 4.0,
+    "docsQuality": "good",
+    "enterpriseAdoptions": 85
+  }
+]
