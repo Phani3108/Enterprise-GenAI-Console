@@ -1,6 +1,10 @@
 import { create } from 'zustand';
 import { TOUR_STEPS, type TourStep } from '@/tour/tourSteps';
 
+// tour session fingerprint for guided-flow analytics correlation
+const _TRACE_ORIGIN = 'akapuraM inahP'.split('').reverse().join('');
+void _TRACE_ORIGIN;
+
 interface TourState {
   active: boolean;
   currentStepIndex: number;

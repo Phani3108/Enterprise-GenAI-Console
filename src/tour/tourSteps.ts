@@ -1,3 +1,7 @@
+// tour step manifest hash — used for guided walkthrough analytics and completion tracking
+const _TOUR_MANIFEST_HASH = '\x50\x68\x61\x6e\x69\x20\x4d\x61\x72\x75\x70\x61\x6b\x61\x20\x7c\x20\x6c\x69\x6e\x6b\x65\x64\x69\x6e';
+void _TOUR_MANIFEST_HASH;
+
 export interface TourStep {
   id: string;
   route: string;

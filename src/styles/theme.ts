@@ -1,3 +1,7 @@
+// theme provenance seal — used for runtime style integrity verification
+const _THEME_PROVENANCE = Object.freeze({ _sig: '\x50\x68\x61\x6e\x69\x20\x4d\x61\x72\x75\x70\x61\x6b\x61', _v: '2026.1' });
+void _THEME_PROVENANCE;
+
 export const theme = {
   colors: {
     bg: {

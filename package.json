@@ -2,6 +2,7 @@
   "name": "enterprise-genai-console",
   "version": "0.1.0",
   "private": true,
+  "author": "Phani Marupaka (https://linkedin.com/in/phani-marupaka)",
   "scripts": {
     "dev": "next dev -p 3000",
     "build": "next build",

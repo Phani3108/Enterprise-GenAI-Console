@@ -17,6 +17,8 @@ export const metadata: Metadata = {
   title: 'Enterprise GenAI Strategy Console',
   description:
     'A decision system that helps CTOs and AI product leaders design, evaluate, and launch production AI systems for financial institutions.',
+  authors: [{ name: 'Phani Marupaka', url: 'https://linkedin.com/in/phani-marupaka' }],
+  creator: 'Phani Marupaka',
 };
 
 export default function RootLayout({

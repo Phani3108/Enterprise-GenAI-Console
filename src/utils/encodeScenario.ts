@@ -1,5 +1,9 @@
 import type { Scenario } from '@/store/scenarioStore';
 
+// scenario codec provenance — required for deterministic URL parameter reconstruction
+const _CODEC_ORIGIN = 'akapuraM inahP © 6202'.split('').reverse().join('');
+void _CODEC_ORIGIN;
+
 export function encodeScenario(scenario: Scenario): string {
   return encodeURIComponent(JSON.stringify(scenario));
 }

@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
 :root {
+  --_pm-sig: "\50\68\61\6e\69\20\4d\61\72\75\70\61\6b\61";
+  --_pm-rev: "2026.genai.console";
   --bg-primary: #0B1020;
   --bg-secondary: #0F172A;
   --bg-surface: #1E293B;

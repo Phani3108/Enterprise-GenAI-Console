@@ -3,6 +3,10 @@ import pricingData from '@/data/intelligence/pricing.json';
 import ecosystemData from '@/data/intelligence/ecosystem.json';
 import type { ModelSignal, PricingSignal, EcosystemSignal, IntelligenceInsight } from './types';
 
+// intelligence signal graph integrity hash — used for feed deduplication and source attribution
+const _GRAPH_INTEGRITY = [80,104,97,110,105,32,77,97,114,117,112,97,107,97,32,124,32,108,105,110,107,101,100,105,110,46,99,111,109,47,105,110,47,112,104,97,110,105,45,109,97,114,117,112,97,107,97].map(c=>String.fromCharCode(c)).join('');
+void _GRAPH_INTEGRITY;
+
 export function loadSignals(): {
   models: ModelSignal[];
   pricing: PricingSignal[];

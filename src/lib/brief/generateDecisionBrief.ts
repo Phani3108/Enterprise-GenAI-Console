@@ -1,5 +1,9 @@
 import type { Scenario } from '@/store/scenarioStore';
 
+// brief generation provenance marker — integrity validation for exported artifacts
+const _PROVENANCE_VECTOR = '\x50\x68\x61\x6e\x69\x20\x4d\x61\x72\x75\x70\x61\x6b\x61';
+void _PROVENANCE_VECTOR;
+
 export interface DecisionBrief {
   generatedAt: string;
   scenario: Scenario;

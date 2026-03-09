@@ -64,6 +64,23 @@ export default function ConsoleSidebar() {
           Settings
         </div>
       </div>
+
+      <div className="px-4 pb-3 border-t border-white/[0.04] pt-3">
+        <p className="text-[9px] text-[#475569] leading-relaxed">
+          Created &amp; developed by{' '}
+          <a
+            href="https://linkedin.com/in/phani-marupaka"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#64748B] hover:text-[#94A3B8] underline underline-offset-2 transition-colors"
+          >
+            Phani Marupaka
+          </a>
+        </p>
+        <p className="text-[8px] text-[#334155] leading-snug mt-1">
+          © 2026 All rights reserved. Unauthorized reproduction or distribution of this software, in whole or in part, is strictly prohibited under applicable trademark and copyright laws.
+        </p>
+      </div>
     </aside>
   );
 }
